@@ -1,0 +1,25 @@
+# IntelliJ
+.idea/
+*.iml
+*.iws
+out/
+
+# Gradle və build
+.gradle/
+build/
+bin/
+
+# Lokal konfiqurasiya (parollar, secret-lər)
+application-local.yaml
+.env
+
+# Yüklənmiş şəkillər
+images/
+
+# Arxivlər və loglar
+*.zip
+*.log
+
+# Əməliyyat sistemi
+.DS_Store
+Thumbs.db

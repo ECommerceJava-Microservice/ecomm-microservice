@@ -1,0 +1,33 @@
+server:
+  port: 8084
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5435/cart_db
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+
+  data:
+    redis:
+      host: localhost
+      port: 6379
+
+  kafka:
+    bootstrap-servers: localhost:9092
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+    open-in-view: false
+
+jwt:
+  secret: VGhpcy1pcy1hLWxvY2FsLWRldmVsb3BtZW50LWp3dC1zZWNyZXQta2V5LWZvci1lY29tbS1hdXRoLXNlcnZpY2U=
+
+services:
+  product-service:
+    url: http://localhost:8083

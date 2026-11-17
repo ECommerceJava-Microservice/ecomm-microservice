@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: payment-service
+
+  profiles:
+    active: local
+
+  kafka:
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JacksonJsonSerializer
+      properties:
+        spring.json.add.type.headers: false
+        max.block.ms: 5000
+
+app:
+  kafka:
+    topics:
+      payment-confirmed: payment-confirmed
+      payment-refunded: payment-refunded

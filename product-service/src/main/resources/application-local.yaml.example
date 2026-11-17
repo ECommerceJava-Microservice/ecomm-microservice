@@ -1,0 +1,36 @@
+server:
+  port: 8083
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5434/product_db
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+
+  kafka:
+    bootstrap-servers: localhost:9092
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+    open-in-view: false
+
+  servlet:
+    multipart:
+      max-file-size: 5MB
+      max-request-size: 5MB
+
+jwt:
+  secret: VGhpcy1pcy1hLWxvY2FsLWRldmVsb3BtZW50LWp3dC1zZWNyZXQta2V5LWZvci1lY29tbS1hdXRoLXNlcnZpY2U=
+
+file:
+  storage:
+    provider: local
+
+project:
+  image: "images/products/"
